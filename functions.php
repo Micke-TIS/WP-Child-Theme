@@ -24,8 +24,40 @@ function sf_child_theme_dequeue_style() {
  */
 
  /**
+  * Add a custom product data tab
+  */
+ add_filter( 'woocommerce_product_tabs', 'woo_new_product_tab' );
+ function woo_new_product_tab( $tabs ) {
+
+ 	// Adds the new tab
+
+ 	$tabs['special_stuff'] = array(
+ 		'title' 	=> __( 'Special stuff', 'woocommerce' ),
+ 		'priority' 	=> 50,
+ 		'callback' 	=> 'woo_new_product_tab_content'
+ 	);
+
+ 	return $tabs;
+
+ }
+ function woo_new_product_tab_content() {
+
+ 	// The new tab content
+
+ 	echo '<h2>New Product Tab</h2>';
+ 	echo '<p>Here\'s your new product tab.</p>';
+
+ }
+
+
+
+
+
+
+ /**
  * Displays the custom text field input field in the WooCommerce product data meta box
  */
+ // Title for custom fields
  function cfwc_create_custom_field() {
    $args = array(
     'id' => 'custom_text_field_title',
@@ -35,7 +67,7 @@ function sf_child_theme_dequeue_style() {
     'description' => __( 'Enter the title of your custom text field.', 'ctwc' ),
  );
   woocommerce_wp_text_input( $args );
-
+// Description for custom field
   $args = array(
    'id' => 'custom_text_field_description',
    'label' => __( 'Custom Text Field Description', 'cfwc' ),
