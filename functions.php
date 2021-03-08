@@ -27,7 +27,7 @@ function sf_child_theme_dequeue_style() {
  add_filter( 'woocommerce_product_data_tabs', 'discount_new_product_data_tab', 50, 1 );
  function discount_new_product_data_tab( $tabs ) {
      $tabs['discount'] = array(
-         'label' => __( 'Discount', 'woocommerce' ),
+         'label' => __( 'Special Stuff', 'woocommerce' ),
          'target' => 'discount_product_data', // <== to be used in the <div> class of the content
          'class' => array('show_if_simple'), // or 'hide_if_simple' or 'show_if_variable'…
      );
