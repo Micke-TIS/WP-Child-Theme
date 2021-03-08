@@ -23,3 +23,12 @@ global $product;
 
 ?>
 <p class="<?php echo esc_attr( apply_filters( 'woocommerce_product_price_class', 'price' ) ); ?>"><?php echo $product->get_price_html(); ?></p>
+<?php
+// Display the value of custom product text field
+    echo get_post_meta($post->ID, '_custom_product_text_field', true);
+// Display the value of custom product number field
+    echo get_post_meta(get_the_ID(), '_custom_product_number_field', true);
+// Display the value of custom product text area
+    echo get_post_meta(get_the_ID(), '_custom_product_textarea', true);
+    ?>
+<?php endwhile; // end of the loop. ?>
