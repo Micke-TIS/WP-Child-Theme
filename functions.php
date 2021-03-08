@@ -57,32 +57,7 @@ function sf_child_theme_dequeue_style() {
  woocommerce_wp_text_input( $args );
  }
 
- /**
- * Displays the custom text field input field in the WooCommerce product data meta box
- */
- // Title for custom fields
- function cfwc_create_custom_field() {
-   $args = array(
-    'id' => 'custom_text_field_title',
-    'label' => __( 'Custom Text Field Title', 'cfwc' ),
-    'class' => 'cfwc-custom-field',
-    'desc_tip' => true,
-    'description' => __( 'Enter the title of your custom text field.', 'ctwc' ),
- );
-  woocommerce_wp_text_input( $args );
-// Description for custom field
-  $args = array(
-   'id' => 'custom_text_field_description',
-   'label' => __( 'Custom Text Field Description', 'cfwc' ),
-   'class' => 'cfwc-custom-field',
-   'desc_tip' => true,
-   'description' => __( 'Enter the title of your custom text field.', 'ctwc' ),
-);
- woocommerce_wp_text_input( $args );
 
-
-
-  }
 
  add_action( 'woocommerce_product_data_panels', 'add_custom_fields_product_options_discount' );
  /**
