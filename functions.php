@@ -29,25 +29,17 @@ function sf_child_theme_dequeue_style() {
  add_filter( 'woocommerce_product_tabs', 'woo_new_product_tab' );
  function woo_new_product_tab( $tabs ) {
 
- 	// Adds the new tab
+   // Add a custom product setting tab to edit product pages options FOR SIMPLE PRODUCTS only
+   add_filter( 'woocommerce_product_data_tabs', 'discount_new_product_data_tab', 50, 1 );
+   function discount_new_product_data_tab( $tabs ) {
+       $tabs['discount'] = array(
+           'label' => __( 'Discount', 'woocommerce' ),
+           'target' => 'discount_product_data', // <== to be used in the <div> class of the content
+           'class' => array('show_if_simple'), // or 'hide_if_simple' or 'show_if_variable'…
+       );
 
- 	$tabs['special_stuff'] = array(
- 		'title' 	=> __( 'Special stuff', 'woocommerce' ),
- 		'priority' 	=> 50,
- 		'callback' 	=> 'woo_new_product_tab_content'
- 	);
-
- 	return $tabs;
-
- }
- function woo_new_product_tab_content() {
-
- 	// The new tab content
-
- 	echo '<h2>New Product Tab</h2>';
- 	echo '<p>Here\'s your new product tab.</p>';
-
- }
+       return $tabs;
+   }
 
 
 
@@ -81,7 +73,7 @@ function sf_child_theme_dequeue_style() {
 
   }
 
- add_action( 'woocommerce_product_options_general_product_data', 'cfwc_create_custom_field' );
+ add_action( 'woocommerce_product_data_panels', 'add_custom_fields_product_options_discount' );
  /**
  * Saves the custom field data to product meta data
  */
