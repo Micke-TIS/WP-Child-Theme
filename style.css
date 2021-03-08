@@ -26,5 +26,5 @@ Images License: GNU General Public License v2 or later
  #woocommerce-product-data ul.wc-tabs li.discount_new_product_data_tab a::before,
  .woocommerce ul.wc-tabs li.discount_new_product_data_tab a::before {
      font-family: Dashicons;
-     content: "\f111";
+     content: "gg";
  }
