@@ -25,7 +25,7 @@ function sf_child_theme_dequeue_style() {
 
 
  // Display Fields
- add_action('woocommerce_product_options_general_product_data', 'woocommerce_product_custom_fields');
+ add_action('woocommerce_product_options_advanced_product_data', 'woocommerce_product_custom_fields');
  // Save Fields
  add_action('woocommerce_process_product_meta', 'woocommerce_product_custom_fields_save');
  function woocommerce_product_custom_fields()
