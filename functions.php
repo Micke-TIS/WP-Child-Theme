@@ -85,7 +85,8 @@ function cfwc_display_custom_field() {
       $product = wc_get_product( $post->ID );
       $description = $product->get_meta( 'custom_text_field_description' );
         if( $description ) {
-          echo get_post_meta($post->ID, '</br> custom_text_field_description', true);
+          echo "</br >";
+          echo get_post_meta($post->ID, 'custom_text_field_description', true);
         }
 
 
