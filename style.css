@@ -1,6 +1,6 @@
 /*
 Theme Name:   	Storefront Child Theme
-Theme URI:    	
+Theme URI:
 Author:       	Mikael
 Author URI:
 Template:     	storefront
@@ -22,3 +22,9 @@ Images License: GNU General Public License v2 or later
 /*
  * Add your own custom css below this text.
  */
+ #woocommerce-coupon-data ul.wc-tabs li.discount_new_product_data_tab a::before,
+ #woocommerce-product-data ul.wc-tabs li.discount_new_product_data_tab a::before,
+ .woocommerce ul.wc-tabs li.discount_new_product_data_tab a::before {
+     font-family: Dashicons;
+     content: "\f111";
+ }
