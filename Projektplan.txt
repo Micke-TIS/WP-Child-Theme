@@ -1,0 +1,50 @@
+SAMMANFATTNING
+Jag ska genomföra en ehandelswebbplats i innehålssystemet Wordpress med pluginet
+Woocommerce som grund. I denna webbplats så kommer jag att utveckla vissa delar
+så som child theme, unika produktfält i produktblad med mera.
+
+BESTÄLLARE
+Jag är själv projektledare för min webbplats. Mina mål sätter jag själv och försöker
+att sätta upp tiden för det. Min handledare (lärare) kommer att sätta upp delmålen för
+mig under lektionerna.
+
+BAKGRUND
+Vi ska göra ett projektarbete tillsammans under skoltiden för ämnet webbserverprogrammering 2.
+
+SYFTE OCH MÅL
+Målet är att jag ska kunna nå mina kunskapskrav i ämnet och då även lära mig att utveckla
+en dynamisk webbplats med Wordpress och Woocommerce.
+
+METOD / MODELL
+Metoden för programmering är med hjälp av Atom att vi skriver php, css och html med mera
+för att utveckla webbplatsen. Vi har ingen projektmetod i nuläget.
+
+OMFATTNING OCH AVGRÄNSNINGAR
+Projektet löper ut under hela kursen.
+
+KRAVSPECIFIKATION
+Min handledare/lärare sätter kraven för hur projektet skall utföras och om webbplatsen är
+av god praxis.
+
+LEVERANS OCH INFÖRANDE
+Projektet levereras i form av lokal webbserver samt Github för min handledare/lärare att kunna
+gå igenom.
+
+NULÄGESANALYS
+Projektet kan påverkas ifall jag varit sjuk eller inte kunnat närvara på lektionerna.
+
+ORGANISATION OCH BEMANNING
+Vi gör detta projektet tillsammans i klassen men jag utvecklar min egen webbplats lokalt
+själv på min dator.
+
+KOMMUNIKATION
+Vår kommunikation är via Teams tillsammans med min handledare/lärare och resterande av klassen.
+Eventuell kod som jag skriver kommuniceras via Github.
+
+MILSTOLPAR
+
+AKTIVITETER
+
+TIDSPLAN
+
+RISKANALYS
