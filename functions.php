@@ -86,10 +86,9 @@ function sf_child_theme_dequeue_style() {
      if (!empty($woocommerce_custom_procut_textarea))
          update_post_meta($post_id, '_custom_product_textarea', esc_html($woocommerce_custom_procut_textarea));
  }
-
+?>
  <?php while (have_posts()) : the_post(); ?>
  <?php wc_get_template_part('content', 'single-product'); ?>
-
  <?php
  // Display the value of custom product text field
      echo get_post_meta($post->ID, '_custom_product_text_field', true);
