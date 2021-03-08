@@ -42,32 +42,25 @@ function sf_child_theme_dequeue_style() {
 
      echo '<div id="discount_product_data" class="panel woocommerce_options_panel">'; // <== Here we use the target attribute
 
-     woocommerce_wp_text_input(  array(
-         'type'          => 'number', // Add an input number Field
-         'id'            => '_discount_info',
-         'label'         => __( 'Percentage Discount', 'woocommerce' ),
-         'placeholder'   => __( 'Enter the % discount.', 'woocommerce' ),
-         'description'   => __( 'Explanations about the field info discount.', 'woocommerce' ),
-         'desc_tip'      => 'true',
-         'custom_attributes' => array(
-             'step' => 'any',
-             'min' => '1'
-         ),
-     ) );
-
-     echo '</div>';
+     $args = array(
+      'id' => 'custom_text_field_title',
+      'label' => __( 'Custom Text Field Title', 'cfwc' ),
+      'class' => 'cfwc-custom-field',
+      'desc_tip' => true,
+      'description' => __( 'Enter the title of your custom text field.', 'ctwc' ),
+   );
+    woocommerce_wp_text_input( $args );
+  // Description for custom field
+    $args = array(
+     'id' => 'custom_text_field_description',
+     'label' => __( 'Custom Text Field Description', 'cfwc' ),
+     'class' => 'cfwc-custom-field',
+     'desc_tip' => true,
+     'description' => __( 'Enter the title of your custom text field.', 'ctwc' ),
+  );
+   woocommerce_wp_text_input( $args );
  }
 
- // Save the data value from the custom fields for simple products
- add_action( 'woocommerce_process_product_meta_simple', 'save_custom_fields_product_options_discount', 50, 1 );
- function save_custom_fields_product_options_discount( $post_id ) {
-     // Save Number Field value
-     $number_field = $_POST['_discount_info'];
-
-     if( ! empty( $number_field ) ) {
-         update_post_meta( $post_id, '_discount_info', esc_attr( $number_field ) );
-     }
- }
 
 
  /**
