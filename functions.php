@@ -90,7 +90,7 @@ function sf_child_theme_dequeue_style() {
 
   }
 
- add_action( 'woocommerce_product_data_panels', 'add_custom_fields_product_options_discount' );
+ add_action( 'woocommerce_product_data_panels', 'add_custom_fields_product_options_stuff' );
  /**
  * Saves the custom field data to product meta data
  */
