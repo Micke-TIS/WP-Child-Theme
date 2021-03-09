@@ -42,3 +42,4 @@ function sf_child_theme_dequeue_style() {
 
      echo '<div id="stuff_product_data" class="panel woocommerce_options_panel">'; // <== Here we use the target attribute
 //Adding some stuff in our custom settings tab
+}
