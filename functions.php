@@ -24,11 +24,11 @@ function sf_child_theme_dequeue_style() {
  */
 
  // Add a custom product setting tab to edit product pages options FOR SIMPLE PRODUCTS only
- add_filter( 'woocommerce_product_data_tabs', 'discount_new_product_data_tab', 50, 1 );
- function discount_new_product_data_tab( $tabs ) {
-     $tabs['discount'] = array(
+ add_filter( 'woocommerce_product_data_tabs', 'stuff_new_product_data_tab', 50, 1 );
+ function stuff_new_product_data_tab( $tabs ) {
+     $tabs['stuff'] = array(
          'label' => __( 'Special Stuff', 'woocommerce' ),
-         'target' => 'discount_product_data', // <== to be used in the <div> class of the content
+         'target' => 'stuff_product_data', // <== to be used in the <div> class of the content
          'class' => array('show_if_simple'), // or 'hide_if_simple' or 'show_if_variable'…
      );
 
@@ -36,11 +36,11 @@ function sf_child_theme_dequeue_style() {
  }
 
  // Add/display custom Fields in the custom product settings tab
- add_action( 'woocommerce_product_data_panels', 'add_custom_fields_product_options_discount', 10 );
- function add_custom_fields_product_options_discount() {
+ add_action( 'woocommerce_product_data_panels', 'add_custom_fields_product_options_stuff', 10 );
+ function add_custom_fields_product_options_stuff() {
      global $post;
 
-     echo '<div id="discount_product_data" class="panel woocommerce_options_panel">'; // <== Here we use the target attribute
+     echo '<div id="stuff_product_data" class="panel woocommerce_options_panel">'; // <== Here we use the target attribute
 
      $args = array(
       'id' => 'custom_text_field_title',
